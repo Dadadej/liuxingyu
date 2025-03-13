@@ -9,202 +9,207 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="gradient-bg animate-fade-in">
-    <!-- 状态栏 -->
-    <div class="status-bar">
-        <div class="time">9:41</div>
-        <div class="icons">
-            <i class="fas fa-signal"></i>
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-battery-full"></i>
+    <div class="device-frame">
+        <!-- 动态岛 -->
+        <div class="dynamic-island"></div>
+        
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
         </div>
-    </div>
 
-    <!-- 导航栏 -->
-    <div class="nav-bar">
-        <div class="title">设置</div>
-    </div>
+        <!-- 导航栏 -->
+        <div class="nav-bar">
+            <div class="title">设置</div>
+        </div>
 
-    <!-- 主内容区 -->
-    <div class="container">
-        <!-- 个人信息 -->
-        <div class="decorative-border mb-6">
-            <div class="flex items-center">
-                <div class="relative">
-                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-accent-color-1 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                        <span>我</span>
+        <!-- 主内容区 -->
+        <div class="container">
+            <!-- 个人信息 -->
+            <div class="decorative-border mb-6">
+                <div class="flex items-center">
+                    <div class="relative">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-accent-color-1 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                            <span>我</span>
+                        </div>
+                        <div class="absolute bottom-0 right-0 bg-success-color w-4 h-4 rounded-full border-2 border-white"></div>
                     </div>
-                    <div class="absolute bottom-0 right-0 bg-success-color w-4 h-4 rounded-full border-2 border-white"></div>
-                </div>
-                <div class="ml-4">
-                    <h2 class="text-xl font-bold">我的人记</h2>
-                    <p class="text-gray">记录生活中的人与事</p>
+                    <div class="ml-4">
+                        <h2 class="text-xl font-bold">我的人记</h2>
+                        <p class="text-gray">记录生活中的人与事</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- 通用设置 -->
+            <h3 class="text-lg font-semibold mb-2 flex items-center">
+                <i class="fas fa-sliders-h mr-2 text-primary"></i>
+                通用
+            </h3>
+            <div class="list mb-6">
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">主题</div>
+                    </div>
+                    <div class="text-primary">浅色</div>
+                    <div class="chevron">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">语言</div>
+                    </div>
+                    <div class="text-primary">简体中文</div>
+                    <div class="chevron">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">字体大小</div>
+                    </div>
+                    <div class="text-primary">中</div>
+                    <div class="chevron">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 数据与隐私 -->
+            <h3 class="text-lg font-semibold mb-2 flex items-center">
+                <i class="fas fa-shield-alt mr-2 text-secondary"></i>
+                数据与隐私
+            </h3>
+            <div class="list mb-6">
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">数据备份</div>
+                        <div class="subtitle">将数据备份到本地文件</div>
+                    </div>
+                    <div class="chevron">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">数据恢复</div>
+                        <div class="subtitle">从备份文件恢复数据</div>
+                    </div>
+                    <div class="chevron">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">隐私设置</div>
+                        <div class="subtitle">管理应用权限和数据使用</div>
+                    </div>
+                    <div class="chevron">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 通知 -->
+            <h3 class="text-lg font-semibold mb-2 flex items-center">
+                <i class="fas fa-bell mr-2 text-accent-color-1"></i>
+                通知
+            </h3>
+            <div class="list mb-6">
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">提醒通知</div>
+                        <div class="subtitle">接收事件提醒</div>
+                    </div>
+                    <div class="relative inline-block w-12 h-6">
+                        <input type="checkbox" id="notification" class="opacity-0 w-0 h-0" checked>
+                        <span class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-primary rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-5 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300"></span>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">生日提醒</div>
+                        <div class="subtitle">提前3天提醒</div>
+                    </div>
+                    <div class="relative inline-block w-12 h-6">
+                        <input type="checkbox" id="birthday" class="opacity-0 w-0 h-0" checked>
+                        <span class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-primary rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-5 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300"></span>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">纪念日提醒</div>
+                        <div class="subtitle">提前1周提醒</div>
+                    </div>
+                    <div class="relative inline-block w-12 h-6">
+                        <input type="checkbox" id="anniversary" class="opacity-0 w-0 h-0" checked>
+                        <span class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-primary rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-5 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 关于 -->
+            <h3 class="text-lg font-semibold mb-2 flex items-center">
+                <i class="fas fa-info-circle mr-2 text-accent-color-5"></i>
+                关于
+            </h3>
+            <div class="list mb-6">
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">版本</div>
+                    </div>
+                    <div class="text-gray">1.0.0</div>
+                </div>
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">用户协议</div>
+                    </div>
+                    <div class="chevron">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">隐私政策</div>
+                    </div>
+                    <div class="chevron">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="content">
+                        <div class="title">反馈与建议</div>
+                    </div>
+                    <div class="chevron">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 退出登录 -->
+            <button class="btn btn-danger btn-block mt-6">清除所有数据</button>
         </div>
 
-        <!-- 通用设置 -->
-        <h3 class="text-lg font-semibold mb-2 flex items-center">
-            <i class="fas fa-sliders-h mr-2 text-primary"></i>
-            通用
-        </h3>
-        <div class="list mb-6">
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">主题</div>
-                </div>
-                <div class="text-primary">浅色</div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
+        <!-- 底部标签栏 -->
+        <div class="tab-bar">
+            <div class="tab-item" onclick="location.href='home.html'">
+                <i class="fas fa-user-friends"></i>
+                <span>人物</span>
             </div>
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">语言</div>
-                </div>
-                <div class="text-primary">简体中文</div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
+            <div class="tab-item" onclick="location.href='timeline.html'">
+                <i class="fas fa-clock"></i>
+                <span>时间线</span>
             </div>
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">字体大小</div>
-                </div>
-                <div class="text-primary">中</div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
+            <div class="tab-item active">
+                <i class="fas fa-cog"></i>
+                <span>设置</span>
             </div>
-        </div>
-
-        <!-- 数据与隐私 -->
-        <h3 class="text-lg font-semibold mb-2 flex items-center">
-            <i class="fas fa-shield-alt mr-2 text-secondary"></i>
-            数据与隐私
-        </h3>
-        <div class="list mb-6">
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">数据备份</div>
-                    <div class="subtitle">将数据备份到本地文件</div>
-                </div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">数据恢复</div>
-                    <div class="subtitle">从备份文件恢复数据</div>
-                </div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">隐私设置</div>
-                    <div class="subtitle">管理应用权限和数据使用</div>
-                </div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-        </div>
-
-        <!-- 通知 -->
-        <h3 class="text-lg font-semibold mb-2 flex items-center">
-            <i class="fas fa-bell mr-2 text-accent-color-1"></i>
-            通知
-        </h3>
-        <div class="list mb-6">
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">提醒通知</div>
-                    <div class="subtitle">接收事件提醒</div>
-                </div>
-                <div class="relative inline-block w-12 h-6">
-                    <input type="checkbox" id="notification" class="opacity-0 w-0 h-0" checked>
-                    <span class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-primary rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-5 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300"></span>
-                </div>
-            </div>
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">生日提醒</div>
-                    <div class="subtitle">提前3天提醒</div>
-                </div>
-                <div class="relative inline-block w-12 h-6">
-                    <input type="checkbox" id="birthday" class="opacity-0 w-0 h-0" checked>
-                    <span class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-primary rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-5 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300"></span>
-                </div>
-            </div>
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">纪念日提醒</div>
-                    <div class="subtitle">提前1周提醒</div>
-                </div>
-                <div class="relative inline-block w-12 h-6">
-                    <input type="checkbox" id="anniversary" class="opacity-0 w-0 h-0" checked>
-                    <span class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-primary rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-5 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300"></span>
-                </div>
-            </div>
-        </div>
-
-        <!-- 关于 -->
-        <h3 class="text-lg font-semibold mb-2 flex items-center">
-            <i class="fas fa-info-circle mr-2 text-accent-color-5"></i>
-            关于
-        </h3>
-        <div class="list mb-6">
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">版本</div>
-                </div>
-                <div class="text-gray">1.0.0</div>
-            </div>
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">用户协议</div>
-                </div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">隐私政策</div>
-                </div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-            <div class="list-item">
-                <div class="content">
-                    <div class="title">反馈与建议</div>
-                </div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-        </div>
-
-        <!-- 退出登录 -->
-        <button class="btn btn-danger btn-block mt-6">清除所有数据</button>
-    </div>
-
-    <!-- 底部标签栏 -->
-    <div class="tab-bar">
-        <div class="tab-item" onclick="location.href='home.html'">
-            <i class="fas fa-user-friends"></i>
-            <span>人物</span>
-        </div>
-        <div class="tab-item" onclick="location.href='timeline.html'">
-            <i class="fas fa-clock"></i>
-            <span>时间线</span>
-        </div>
-        <div class="tab-item active">
-            <i class="fas fa-cog"></i>
-            <span>设置</span>
         </div>
     </div>
 </body>

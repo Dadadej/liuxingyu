@@ -14,6 +14,8 @@
     --accent-color-3: #FFDAC1;
     --accent-color-4: #E2F0CB;
     --accent-color-5: #B5EAD7;
+    --iphone-16-pro-width: 393px;
+    --iphone-16-pro-height: 852px;
 }
 
 body {
@@ -23,6 +25,11 @@ body {
     background-color: var(--light-color);
     color: var(--dark-color);
     background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    max-width: var(--iphone-16-pro-width);
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* 状态栏样式 */
@@ -39,6 +46,7 @@ body {
     top: 0;
     z-index: 100;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-top: 45px;
 }
 
 .status-bar .time {
@@ -63,6 +71,7 @@ body {
     font-weight: 600;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    height: 60px;
 }
 
 .nav-bar .title {
@@ -95,6 +104,8 @@ body {
     right: 0;
     border-top: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    height: 85px;
+    padding-bottom: 25px;
 }
 
 .tab-item {
@@ -283,6 +294,7 @@ body {
 .container {
     padding: 20px;
     margin-bottom: 83px; /* 为底部标签栏留出空间 */
+    padding-top: 120px;
 }
 
 .text-primary { color: var(--primary-color); }
@@ -476,4 +488,96 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-color-1);
+}
+
+/* 媒体查询适配 iPhone 16 Pro */
+@media screen and (min-width: 393px) {
+    .container {
+        padding-bottom: 100px;
+        max-width: var(--iphone-16-pro-width);
+        margin: 0 auto;
+    }
+    
+    .status-bar, .nav-bar, .tab-bar {
+        max-width: var(--iphone-16-pro-width);
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+    
+    /* 调整卡片和表单元素大小 */
+    .card {
+        border-radius: 16px;
+    }
+    
+    .form-control {
+        height: 48px;
+        font-size: 16px;
+    }
+    
+    textarea.form-control {
+        min-height: 100px;
+    }
+    
+    /* 调整按钮大小 */
+    .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+    
+    /* 调整头像大小 */
+    .avatar-large {
+        width: 80px;
+        height: 80px;
+    }
+    
+    /* 调整列表项间距 */
+    .list-item {
+        padding: 16px;
+    }
+}
+
+/* 设备模拟框架 */
+.device-frame {
+    position: relative;
+    max-width: var(--iphone-16-pro-width);
+    margin: 0 auto;
+    border-radius: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 0 0 10px #f2f2f2;
+    overflow: hidden;
+}
+
+/* 动态岛样式 */
+.dynamic-island {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 35px;
+    background-color: #000;
+    border-radius: 0 0 20px 20px;
+    z-index: 1000;
+}
+
+/* 调整状态栏以适应动态岛 */
+.status-bar {
+    padding-top: 45px;
+}
+
+/* 调整导航栏高度 */
+.nav-bar {
+    height: 60px;
+}
+
+/* 调整底部标签栏 */
+.tab-bar {
+    height: 85px;
+    padding-bottom: 25px;
+}
+
+/* 调整容器内边距 */
+.container {
+    padding-top: 120px;
 } 

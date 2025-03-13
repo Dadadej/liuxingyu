@@ -18,6 +18,8 @@
             text-align: center;
             color: white;
             padding: 20px;
+            max-width: var(--iphone-16-pro-width);
+            margin: 0 auto;
         }
         .app-logo {
             width: 120px;
@@ -109,6 +111,62 @@
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
+        
+        /* iPhone 16 Pro 设备框架样式 */
+        .iphone-frame {
+            position: relative;
+            width: 100%;
+            max-width: 393px;
+            margin: 40px auto;
+            border-radius: 50px;
+            padding: 10px;
+            background: #1a1a1a;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+        
+        .iphone-screen {
+            position: relative;
+            border-radius: 40px;
+            overflow: hidden;
+            background: #fff;
+            aspect-ratio: 393 / 852;
+        }
+        
+        .iphone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 35px;
+            background: #1a1a1a;
+            border-radius: 0 0 20px 20px;
+            z-index: 10;
+        }
+        
+        .iphone-button {
+            position: absolute;
+            width: 5px;
+            height: 60px;
+            background: #2a2a2a;
+            border-radius: 3px;
+        }
+        
+        .iphone-button.left-top {
+            top: 120px;
+            left: -5px;
+        }
+        
+        .iphone-button.left-center {
+            top: 200px;
+            left: -5px;
+            height: 100px;
+        }
+        
+        .iphone-button.right {
+            top: 150px;
+            right: -5px;
+        }
     </style>
 </head>
 <body>
@@ -161,10 +219,18 @@
             </div>
         </div>
         
-        <div class="app-screens">
-            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="应用截图" class="screen-preview">
-            <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="应用截图" class="screen-preview">
-            <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="应用截图" class="screen-preview">
+        <div class="iphone-frame">
+            <div class="iphone-button left-top"></div>
+            <div class="iphone-button left-center"></div>
+            <div class="iphone-button right"></div>
+            <div class="iphone-screen">
+                <div class="iphone-notch"></div>
+                <div class="app-screens">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="应用截图" class="screen-preview">
+                    <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="应用截图" class="screen-preview">
+                    <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" alt="应用截图" class="screen-preview">
+                </div>
+            </div>
         </div>
         
         <a href="home.html" class="cta-button">
