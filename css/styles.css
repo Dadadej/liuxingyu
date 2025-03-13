@@ -34,19 +34,18 @@ body {
 
 /* 状态栏样式 */
 .status-bar {
-    height: 44px;
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
-    font-size: 12px;
-    position: sticky;
-    top: 0;
+    padding: 0 20px;
     z-index: 100;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding-top: 45px;
+    padding-top: 15px;
 }
 
 .status-bar .time {
@@ -60,18 +59,21 @@ body {
 
 /* 导航栏样式 */
 .nav-bar {
-    height: 44px;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    right: 0;
+    height: 60px;
     background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
-    font-size: 17px;
-    font-weight: 600;
+    padding: 0 20px;
+    z-index: 100;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    height: 60px;
 }
 
 .nav-bar .title {
@@ -81,6 +83,11 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
+    font-size: 18px;
+    margin: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav-bar .back-button,
@@ -92,19 +99,21 @@ body {
 
 /* 底部标签栏样式 */
 .tab-bar {
-    height: 83px;
-    background-color: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    height: 85px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
     border-top: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
-    height: 85px;
     padding-bottom: 25px;
 }
 
@@ -293,8 +302,9 @@ body {
 /* 工具类 */
 .container {
     padding: 20px;
-    margin-bottom: 83px; /* 为底部标签栏留出空间 */
-    padding-top: 120px;
+    padding-top: 130px;
+    padding-bottom: 100px;
+    min-height: 100vh;
 }
 
 .text-primary { color: var(--primary-color); }
@@ -546,38 +556,83 @@ body {
     border-radius: 40px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 0 0 10px #f2f2f2;
     overflow: hidden;
+    background-color: #fff;
+    min-height: 100vh;
+    padding-top: 55px; /* 为状态栏留出空间 */
 }
 
 /* 动态岛样式 */
 .dynamic-island {
     position: absolute;
-    top: 0;
+    top: 12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 120px;
-    height: 35px;
+    width: 126px;
+    height: 34px;
     background-color: #000;
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px;
     z-index: 1000;
 }
 
 /* 调整状态栏以适应动态岛 */
 .status-bar {
-    padding-top: 45px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+    padding-top: 15px;
 }
 
-/* 调整导航栏高度 */
+/* 调整导航栏高度和位置 */
 .nav-bar {
+    position: fixed;
+    top: 55px;
+    left: 0;
+    right: 0;
     height: 60px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 /* 调整底部标签栏 */
 .tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 85px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
     padding-bottom: 25px;
 }
 
 /* 调整容器内边距 */
 .container {
-    padding-top: 120px;
+    padding: 20px;
+    padding-top: 130px;
+    padding-bottom: 100px;
+    min-height: 100vh;
 } 
