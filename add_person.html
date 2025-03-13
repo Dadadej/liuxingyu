@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="gradient-bg animate-fade-in">
     <!-- 状态栏 -->
     <div class="status-bar">
         <div class="time">9:41</div>
@@ -35,10 +35,10 @@
         <!-- 头像选择 -->
         <div class="flex justify-center mb-6">
             <div class="relative">
-                <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden fancy-image">
                     <i class="fas fa-camera text-gray-400 text-2xl"></i>
                 </div>
-                <div class="absolute bottom-0 right-0 bg-primary w-8 h-8 rounded-full flex items-center justify-center">
+                <div class="absolute bottom-0 right-0 bg-primary w-8 h-8 rounded-full flex items-center justify-center shadow-lg">
                     <i class="fas fa-plus text-white"></i>
                 </div>
             </div>
@@ -46,52 +46,82 @@
 
         <!-- 表单 -->
         <form>
-            <div class="form-group">
-                <label for="name" class="form-label">姓名</label>
-                <input type="text" id="name" class="form-control" placeholder="请输入姓名">
+            <div class="card mb-6">
+                <div class="card-header flex items-center">
+                    <i class="fas fa-user mr-2 text-primary"></i>
+                    基本信息
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="name" class="form-label">姓名</label>
+                        <input type="text" id="name" class="form-control" placeholder="请输入姓名">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="relationship" class="form-label">关系</label>
+                        <select id="relationship" class="form-control">
+                            <option value="" disabled selected>请选择关系</option>
+                            <option value="family">家人</option>
+                            <option value="friend">朋友</option>
+                            <option value="colleague">同事</option>
+                            <option value="classmate">同学</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">手机号码</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="请输入手机号码">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">邮箱</label>
+                        <input type="email" id="email" class="form-control" placeholder="请输入邮箱">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="form-group">
+                            <label for="birthday" class="form-label">生日</label>
+                            <input type="date" id="birthday" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="first-meet" class="form-label">首次相识日期</label>
+                            <input type="date" id="first-meet" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-0">
+                        <label for="note" class="form-label">备注</label>
+                        <textarea id="note" class="form-control" rows="4" placeholder="添加一些备注信息..."></textarea>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="relationship" class="form-label">关系</label>
-                <select id="relationship" class="form-control">
-                    <option value="" disabled selected>请选择关系</option>
-                    <option value="family">家人</option>
-                    <option value="friend">朋友</option>
-                    <option value="colleague">同事</option>
-                    <option value="classmate">同学</option>
-                    <option value="other">其他</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="phone" class="form-label">手机号码</label>
-                <input type="tel" id="phone" class="form-control" placeholder="请输入手机号码">
-            </div>
-
-            <div class="form-group">
-                <label for="email" class="form-label">邮箱</label>
-                <input type="email" id="email" class="form-control" placeholder="请输入邮箱">
-            </div>
-
-            <div class="form-group">
-                <label for="birthday" class="form-label">生日</label>
-                <input type="date" id="birthday" class="form-control">
-            </div>
-
-            <div class="form-group">
-                <label for="first-meet" class="form-label">首次相识日期</label>
-                <input type="date" id="first-meet" class="form-control">
-            </div>
-
-            <div class="form-group">
-                <label for="note" class="form-label">备注</label>
-                <textarea id="note" class="form-control" rows="4" placeholder="添加一些备注信息..."></textarea>
+            <!-- 重要程度 -->
+            <div class="card mb-6">
+                <div class="card-header flex items-center">
+                    <i class="fas fa-star mr-2 text-warning-color"></i>
+                    重要程度
+                </div>
+                <div class="card-body">
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-warning-color text-2xl cursor-pointer"></i>
+                        <i class="fas fa-star text-warning-color text-2xl cursor-pointer ml-2"></i>
+                        <i class="fas fa-star text-warning-color text-2xl cursor-pointer ml-2"></i>
+                        <i class="far fa-star text-gray-300 text-2xl cursor-pointer ml-2"></i>
+                        <i class="far fa-star text-gray-300 text-2xl cursor-pointer ml-2"></i>
+                    </div>
+                </div>
             </div>
 
             <!-- 添加首次见面事件 -->
-            <div class="card mt-6">
+            <div class="card">
                 <div class="card-header flex justify-between items-center">
-                    <span>添加首次见面事件</span>
+                    <div class="flex items-center">
+                        <i class="fas fa-history mr-2 text-secondary"></i>
+                        <span>添加首次见面事件</span>
+                    </div>
                     <div class="form-check">
                         <input type="checkbox" id="add-event" class="mr-2">
                         <label for="add-event">添加</label>
@@ -106,9 +136,9 @@
                         <label for="event-description" class="form-label">描述</label>
                         <textarea id="event-description" class="form-control" rows="3" placeholder="描述一下见面的情况..."></textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mb-0">
                         <label class="form-label">添加照片</label>
-                        <div class="border border-dashed border-gray-300 rounded-lg p-4 text-center">
+                        <div class="border border-dashed border-gray-300 rounded-lg p-4 text-center cursor-pointer hover:bg-gray-50 transition-all">
                             <i class="fas fa-image text-gray-400 text-2xl mb-2"></i>
                             <p class="text-gray-500">点击添加照片</p>
                         </div>

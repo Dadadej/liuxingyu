@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="gradient-bg animate-fade-in">
     <!-- 状态栏 -->
     <div class="status-bar">
         <div class="time">9:41</div>
@@ -33,50 +33,65 @@
     <!-- 主内容区 -->
     <div class="container">
         <!-- 人物信息 -->
-        <div class="flex items-center mb-6">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-12 h-12 rounded-full object-cover">
-            <div class="ml-3">
-                <div class="font-semibold">张小明</div>
-                <div class="text-gray text-sm">大学同学</div>
+        <div class="decorative-border mb-6">
+            <div class="flex items-center">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-lg">
+                <div class="ml-3">
+                    <div class="font-semibold">张小明</div>
+                    <div class="text-gray text-sm">大学同学</div>
+                </div>
             </div>
         </div>
 
         <!-- 表单 -->
         <form>
-            <div class="form-group">
-                <label for="event-date" class="form-label">日期</label>
-                <input type="date" id="event-date" class="form-control" value="2023-11-20">
-            </div>
+            <div class="card mb-6">
+                <div class="card-header flex items-center">
+                    <i class="fas fa-info-circle mr-2 text-primary"></i>
+                    基本信息
+                </div>
+                <div class="card-body">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="form-group">
+                            <label for="event-date" class="form-label">日期</label>
+                            <input type="date" id="event-date" class="form-control" value="2023-11-20">
+                        </div>
 
-            <div class="form-group">
-                <label for="event-time" class="form-label">时间</label>
-                <input type="time" id="event-time" class="form-control" value="14:30">
-            </div>
+                        <div class="form-group">
+                            <label for="event-time" class="form-label">时间</label>
+                            <input type="time" id="event-time" class="form-control" value="14:30">
+                        </div>
+                    </div>
 
-            <div class="form-group">
-                <label for="event-location" class="form-label">地点</label>
-                <input type="text" id="event-location" class="form-control" placeholder="在哪里见面的？">
-            </div>
+                    <div class="form-group">
+                        <label for="event-location" class="form-label">地点</label>
+                        <input type="text" id="event-location" class="form-control" placeholder="在哪里见面的？">
+                    </div>
 
-            <div class="form-group">
-                <label for="event-description" class="form-label">描述</label>
-                <textarea id="event-description" class="form-control" rows="5" placeholder="描述一下见面的情况..."></textarea>
+                    <div class="form-group mb-0">
+                        <label for="event-description" class="form-label">描述</label>
+                        <textarea id="event-description" class="form-control" rows="5" placeholder="描述一下见面的情况..."></textarea>
+                    </div>
+                </div>
             </div>
 
             <!-- 添加媒体 -->
-            <div class="card mt-6">
-                <div class="card-header">添加媒体</div>
+            <div class="card mb-6">
+                <div class="card-header flex items-center">
+                    <i class="fas fa-image mr-2 text-secondary"></i>
+                    添加媒体
+                </div>
                 <div class="card-body">
-                    <div class="grid grid-cols-3 gap-3 mb-4">
-                        <div class="border border-dashed border-gray-300 rounded-lg aspect-square flex flex-col items-center justify-center">
+                    <div class="grid grid-cols-3 gap-3 mb-0">
+                        <div class="border border-dashed border-gray-300 rounded-lg aspect-square flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 transition-all">
                             <i class="fas fa-image text-gray-400 text-2xl mb-2"></i>
                             <span class="text-gray-500 text-sm">照片</span>
                         </div>
-                        <div class="border border-dashed border-gray-300 rounded-lg aspect-square flex flex-col items-center justify-center">
+                        <div class="border border-dashed border-gray-300 rounded-lg aspect-square flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 transition-all">
                             <i class="fas fa-video text-gray-400 text-2xl mb-2"></i>
                             <span class="text-gray-500 text-sm">视频</span>
                         </div>
-                        <div class="border border-dashed border-gray-300 rounded-lg aspect-square flex flex-col items-center justify-center">
+                        <div class="border border-dashed border-gray-300 rounded-lg aspect-square flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 transition-all">
                             <i class="fas fa-microphone text-gray-400 text-2xl mb-2"></i>
                             <span class="text-gray-500 text-sm">语音</span>
                         </div>
@@ -85,46 +100,74 @@
             </div>
 
             <!-- 心情标签 -->
-            <div class="form-group mt-6">
-                <label class="form-label">心情标签</label>
-                <div class="flex flex-wrap gap-2 mt-2">
-                    <div class="px-4 py-2 bg-light-color rounded-full text-primary border border-primary">
-                        <i class="far fa-smile mr-1"></i> 开心
-                    </div>
-                    <div class="px-4 py-2 bg-light-color rounded-full text-gray-color">
-                        <i class="far fa-meh mr-1"></i> 一般
-                    </div>
-                    <div class="px-4 py-2 bg-light-color rounded-full text-gray-color">
-                        <i class="far fa-sad-tear mr-1"></i> 难过
-                    </div>
-                    <div class="px-4 py-2 bg-light-color rounded-full text-gray-color">
-                        <i class="far fa-angry mr-1"></i> 生气
-                    </div>
-                    <div class="px-4 py-2 bg-light-color rounded-full text-gray-color">
-                        <i class="far fa-surprise mr-1"></i> 惊讶
+            <div class="card mb-6">
+                <div class="card-header flex items-center">
+                    <i class="fas fa-smile mr-2 text-accent-color-1"></i>
+                    心情标签
+                </div>
+                <div class="card-body">
+                    <div class="flex flex-wrap gap-2">
+                        <div class="px-4 py-2 bg-light-color rounded-full text-primary border border-primary cursor-pointer">
+                            <i class="far fa-smile mr-1"></i> 开心
+                        </div>
+                        <div class="px-4 py-2 bg-light-color rounded-full text-gray-color cursor-pointer hover:border hover:border-gray-300">
+                            <i class="far fa-meh mr-1"></i> 一般
+                        </div>
+                        <div class="px-4 py-2 bg-light-color rounded-full text-gray-color cursor-pointer hover:border hover:border-gray-300">
+                            <i class="far fa-sad-tear mr-1"></i> 难过
+                        </div>
+                        <div class="px-4 py-2 bg-light-color rounded-full text-gray-color cursor-pointer hover:border hover:border-gray-300">
+                            <i class="far fa-angry mr-1"></i> 生气
+                        </div>
+                        <div class="px-4 py-2 bg-light-color rounded-full text-gray-color cursor-pointer hover:border hover:border-gray-300">
+                            <i class="far fa-surprise mr-1"></i> 惊讶
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 重要程度 -->
-            <div class="form-group mt-6">
-                <label class="form-label">重要程度</label>
-                <div class="flex items-center mt-2">
-                    <i class="fas fa-star text-warning-color"></i>
-                    <i class="fas fa-star text-warning-color"></i>
-                    <i class="fas fa-star text-warning-color"></i>
-                    <i class="far fa-star text-gray-300"></i>
-                    <i class="far fa-star text-gray-300"></i>
+            <div class="card mb-6">
+                <div class="card-header flex items-center">
+                    <i class="fas fa-star mr-2 text-warning-color"></i>
+                    重要程度
+                </div>
+                <div class="card-body">
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-warning-color text-2xl cursor-pointer"></i>
+                        <i class="fas fa-star text-warning-color text-2xl cursor-pointer ml-2"></i>
+                        <i class="fas fa-star text-warning-color text-2xl cursor-pointer ml-2"></i>
+                        <i class="far fa-star text-gray-300 text-2xl cursor-pointer ml-2"></i>
+                        <i class="far fa-star text-gray-300 text-2xl cursor-pointer ml-2"></i>
+                    </div>
                 </div>
             </div>
 
             <!-- 提醒 -->
-            <div class="form-group mt-6">
-                <div class="flex justify-between items-center">
-                    <label class="form-label mb-0">设置提醒</label>
-                    <div class="relative inline-block w-12 h-6">
-                        <input type="checkbox" id="reminder" class="opacity-0 w-0 h-0">
-                        <span class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-300 rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-1 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300"></span>
+            <div class="card">
+                <div class="card-header flex items-center">
+                    <i class="fas fa-bell mr-2 text-accent-color-5"></i>
+                    提醒设置
+                </div>
+                <div class="card-body">
+                    <div class="flex justify-between items-center">
+                        <label class="form-label mb-0">设置提醒</label>
+                        <div class="relative inline-block w-12 h-6">
+                            <input type="checkbox" id="reminder" class="opacity-0 w-0 h-0">
+                            <span class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-300 rounded-full transition-all duration-300 before:absolute before:h-4 before:w-4 before:left-1 before:bottom-1 before:bg-white before:rounded-full before:transition-all before:duration-300"></span>
+                        </div>
+                    </div>
+                    <div class="mt-4 hidden">
+                        <div class="form-group mb-0">
+                            <label for="reminder-time" class="form-label">提醒时间</label>
+                            <select id="reminder-time" class="form-control">
+                                <option value="0">事件开始时</option>
+                                <option value="15">提前15分钟</option>
+                                <option value="30">提前30分钟</option>
+                                <option value="60">提前1小时</option>
+                                <option value="1440">提前1天</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>

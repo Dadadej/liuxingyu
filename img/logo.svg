@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B6B" />
+      <stop offset="100%" stop-color="#FF9A8B" />
+    </linearGradient>
+    <linearGradient id="topGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9A8B" />
+      <stop offset="20%" stop-color="#FFB7B2" />
+      <stop offset="40%" stop-color="#FFDAC1" />
+      <stop offset="60%" stop-color="#E2F0CB" />
+      <stop offset="80%" stop-color="#B5EAD7" />
+      <stop offset="100%" stop-color="#4ECDC4" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景圆角矩形 -->
+  <rect x="10" y="10" width="180" height="180" rx="40" ry="40" fill="white" />
+  
+  <!-- 顶部彩色条 -->
+  <rect x="10" y="10" width="180" height="12" fill="url(#topGradient)" rx="6" ry="6" />
+  
+  <!-- 中文字符"记" -->
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="100" font-weight="bold" text-anchor="middle" fill="url(#gradient)">记</text>
+  
+  <!-- 小人图标 -->
+  <g transform="translate(100, 60) scale(0.6)">
+    <circle cx="0" cy="-20" r="15" fill="url(#gradient)" />
+    <path d="M-15,0 Q0,30 15,0" stroke="url(#gradient)" stroke-width="5" fill="none" />
+    <line x1="-15" y1="0" x2="-25" y2="20" stroke="url(#gradient)" stroke-width="5" />
+    <line x1="15" y1="0" x2="25" y2="20" stroke="url(#gradient)" stroke-width="5" />
+  </g>
+</svg> 
