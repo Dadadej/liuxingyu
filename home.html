@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="gradient-bg animate-fade-in">
     <!-- 状态栏 -->
     <div class="status-bar">
         <div class="time">9:41</div>
@@ -29,46 +29,72 @@
 
     <!-- 主内容区 -->
     <div class="container">
+        <!-- 欢迎信息 -->
+        <div class="decorative-border mb-6">
+            <div class="flex items-center">
+                <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white text-2xl font-bold">
+                    <span>我</span>
+                </div>
+                <div class="ml-4">
+                    <h2 class="text-xl font-bold">欢迎回来</h2>
+                    <p class="text-gray">今天是个记录美好回忆的好日子</p>
+                </div>
+            </div>
+        </div>
+
         <!-- 人物列表 -->
+        <h3 class="text-lg font-semibold mb-2 flex items-center">
+            <i class="fas fa-user-friends mr-2 text-primary"></i>
+            我的人物
+        </h3>
         <div class="list">
             <div class="list-item" onclick="location.href='person_detail.html'">
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="avatar">
                 <div class="content">
                     <div class="title">张小明</div>
-                    <div class="subtitle">大学同学 · 上次见面: 2023年10月15日</div>
+                    <div class="subtitle">大学同学</div>
+                </div>
+                <div class="tag">
+                    <i class="fas fa-star text-warning-color"></i> 3
                 </div>
                 <div class="chevron">
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
-
-            <div class="list-item" onclick="location.href='person_detail.html'">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="avatar">
-                <div class="content">
-                    <div class="title">李华</div>
-                    <div class="subtitle">工作伙伴 · 上次见面: 2023年11月2日</div>
-                </div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-
-            <div class="list-item" onclick="location.href='person_detail.html'">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="avatar">
-                <div class="content">
-                    <div class="title">王芳</div>
-                    <div class="subtitle">高中同学 · 上次见面: 2023年9月20日</div>
-                </div>
-                <div class="chevron">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-
-            <div class="list-item" onclick="location.href='person_detail.html'">
+            <div class="list-item">
                 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="avatar">
                 <div class="content">
                     <div class="title">赵强</div>
-                    <div class="subtitle">邻居 · 上次见面: 2023年11月10日</div>
+                    <div class="subtitle">邻居</div>
+                </div>
+                <div class="tag">
+                    <i class="fas fa-star text-warning-color"></i> 2
+                </div>
+                <div class="chevron">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="list-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="avatar">
+                <div class="content">
+                    <div class="title">李华</div>
+                    <div class="subtitle">工作伙伴</div>
+                </div>
+                <div class="tag">
+                    <i class="fas fa-star text-warning-color"></i> 4
+                </div>
+                <div class="chevron">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="list-item">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="avatar">
+                <div class="content">
+                    <div class="title">王芳</div>
+                    <div class="subtitle">高中同学</div>
+                </div>
+                <div class="tag">
+                    <i class="fas fa-star text-warning-color"></i> 3
                 </div>
                 <div class="chevron">
                     <i class="fas fa-chevron-right"></i>
@@ -77,28 +103,65 @@
         </div>
 
         <!-- 最近事件 -->
-        <h2 class="text-xl font-bold mb-2 mt-4">最近事件</h2>
+        <h3 class="text-lg font-semibold mb-2 mt-6 flex items-center">
+            <i class="fas fa-history mr-2 text-secondary"></i>
+            最近事件
+        </h3>
         <div class="card">
-            <div class="card-body">
-                <div class="flex items-center mb-3">
+            <div class="card-body p-0">
+                <div class="list-item">
                     <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="avatar">
-                    <div class="ml-3">
-                        <div class="font-semibold">张小明</div>
-                        <div class="text-gray text-sm">2023年11月15日 · 咖啡厅</div>
+                    <div class="content">
+                        <div class="title">张小明</div>
+                        <div class="subtitle">2023年11月15日 · 咖啡厅</div>
+                        <p class="mt-1 text-sm">一起讨论了新项目的想法，她提出了很多有创意的建议。</p>
                     </div>
                 </div>
-                <p>一起讨论了新项目的想法，她提出了很多有创意的建议。下次约定去参观她推荐的艺术展。</p>
-                <div class="mt-3">
-                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="rounded-lg w-full h-48 object-cover">
+                <div class="px-4 pb-4">
+                    <div class="fancy-image">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="w-full h-48 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body p-0">
+                <div class="list-item">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="avatar">
+                    <div class="content">
+                        <div class="title">赵强</div>
+                        <div class="subtitle">2023年11月10日 · 小区</div>
+                        <p class="mt-1 text-sm">在小区遇到赵强，聊了最近的物业管理问题。他提到最近在学习烹饪。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 生日提醒 -->
+        <h3 class="text-lg font-semibold mb-2 mt-6 flex items-center">
+            <i class="fas fa-birthday-cake mr-2 text-accent-color-1"></i>
+            即将到来的生日
+        </h3>
+        <div class="card">
+            <div class="card-body">
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-12 h-12 rounded-full object-cover border-2 border-accent-color-1">
+                    <div class="ml-3">
+                        <div class="font-semibold">王芳</div>
+                        <div class="text-sm text-accent-color-1">
+                            <i class="fas fa-calendar-alt mr-1"></i> 11月25日 (还有5天)
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 浮动添加按钮 -->
-    <a href="add_person.html" class="floating-btn">
+    <!-- 浮动按钮 -->
+    <div class="floating-btn" onclick="location.href='add_person.html'">
         <i class="fas fa-plus"></i>
-    </a>
+    </div>
 
     <!-- 底部标签栏 -->
     <div class="tab-bar">

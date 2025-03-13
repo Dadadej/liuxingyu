@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="gradient-bg animate-fade-in">
     <!-- 状态栏 -->
     <div class="status-bar">
         <div class="time">9:41</div>
@@ -27,22 +27,26 @@
     <!-- 主内容区 -->
     <div class="container">
         <!-- 个人信息 -->
-        <div class="card mb-6">
-            <div class="card-body">
-                <div class="flex items-center">
-                    <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white text-2xl font-bold">
+        <div class="decorative-border mb-6">
+            <div class="flex items-center">
+                <div class="relative">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-accent-color-1 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
                         <span>我</span>
                     </div>
-                    <div class="ml-4">
-                        <h2 class="text-xl font-bold">我的人记</h2>
-                        <p class="text-gray">记录生活中的人与事</p>
-                    </div>
+                    <div class="absolute bottom-0 right-0 bg-success-color w-4 h-4 rounded-full border-2 border-white"></div>
+                </div>
+                <div class="ml-4">
+                    <h2 class="text-xl font-bold">我的人记</h2>
+                    <p class="text-gray">记录生活中的人与事</p>
                 </div>
             </div>
         </div>
 
         <!-- 通用设置 -->
-        <h3 class="text-lg font-semibold mb-2">通用</h3>
+        <h3 class="text-lg font-semibold mb-2 flex items-center">
+            <i class="fas fa-sliders-h mr-2 text-primary"></i>
+            通用
+        </h3>
         <div class="list mb-6">
             <div class="list-item">
                 <div class="content">
@@ -74,11 +78,15 @@
         </div>
 
         <!-- 数据与隐私 -->
-        <h3 class="text-lg font-semibold mb-2">数据与隐私</h3>
+        <h3 class="text-lg font-semibold mb-2 flex items-center">
+            <i class="fas fa-shield-alt mr-2 text-secondary"></i>
+            数据与隐私
+        </h3>
         <div class="list mb-6">
             <div class="list-item">
                 <div class="content">
                     <div class="title">数据备份</div>
+                    <div class="subtitle">将数据备份到本地文件</div>
                 </div>
                 <div class="chevron">
                     <i class="fas fa-chevron-right"></i>
@@ -87,6 +95,7 @@
             <div class="list-item">
                 <div class="content">
                     <div class="title">数据恢复</div>
+                    <div class="subtitle">从备份文件恢复数据</div>
                 </div>
                 <div class="chevron">
                     <i class="fas fa-chevron-right"></i>
@@ -95,6 +104,7 @@
             <div class="list-item">
                 <div class="content">
                     <div class="title">隐私设置</div>
+                    <div class="subtitle">管理应用权限和数据使用</div>
                 </div>
                 <div class="chevron">
                     <i class="fas fa-chevron-right"></i>
@@ -103,11 +113,15 @@
         </div>
 
         <!-- 通知 -->
-        <h3 class="text-lg font-semibold mb-2">通知</h3>
+        <h3 class="text-lg font-semibold mb-2 flex items-center">
+            <i class="fas fa-bell mr-2 text-accent-color-1"></i>
+            通知
+        </h3>
         <div class="list mb-6">
             <div class="list-item">
                 <div class="content">
                     <div class="title">提醒通知</div>
+                    <div class="subtitle">接收事件提醒</div>
                 </div>
                 <div class="relative inline-block w-12 h-6">
                     <input type="checkbox" id="notification" class="opacity-0 w-0 h-0" checked>
@@ -117,6 +131,7 @@
             <div class="list-item">
                 <div class="content">
                     <div class="title">生日提醒</div>
+                    <div class="subtitle">提前3天提醒</div>
                 </div>
                 <div class="relative inline-block w-12 h-6">
                     <input type="checkbox" id="birthday" class="opacity-0 w-0 h-0" checked>
@@ -126,6 +141,7 @@
             <div class="list-item">
                 <div class="content">
                     <div class="title">纪念日提醒</div>
+                    <div class="subtitle">提前1周提醒</div>
                 </div>
                 <div class="relative inline-block w-12 h-6">
                     <input type="checkbox" id="anniversary" class="opacity-0 w-0 h-0" checked>
@@ -135,7 +151,10 @@
         </div>
 
         <!-- 关于 -->
-        <h3 class="text-lg font-semibold mb-2">关于</h3>
+        <h3 class="text-lg font-semibold mb-2 flex items-center">
+            <i class="fas fa-info-circle mr-2 text-accent-color-5"></i>
+            关于
+        </h3>
         <div class="list mb-6">
             <div class="list-item">
                 <div class="content">

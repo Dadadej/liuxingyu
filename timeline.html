@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="gradient-bg animate-fade-in">
     <!-- 状态栏 -->
     <div class="status-bar">
         <div class="time">9:41</div>
@@ -30,19 +30,23 @@
     <!-- 主内容区 -->
     <div class="container">
         <!-- 时间线筛选 -->
-        <div class="flex justify-between items-center mb-4">
-            <div class="text-gray">
-                <i class="fas fa-calendar-alt mr-1"></i> 全部时间
-            </div>
-            <div class="text-primary">
-                <i class="fas fa-sort-amount-down mr-1"></i> 最新优先
+        <div class="decorative-border mb-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-calendar-alt mr-2 text-primary"></i>
+                    <span>全部时间</span>
+                </div>
+                <div class="flex items-center text-primary">
+                    <i class="fas fa-sort-amount-down mr-2"></i>
+                    <span>最新优先</span>
+                </div>
             </div>
         </div>
 
         <!-- 时间线 -->
         <div class="timeline">
             <!-- 日期分组 -->
-            <div class="bg-light-color py-2 px-4 rounded-lg mb-4 -ml-4">
+            <div class="bg-light-color py-2 px-4 rounded-lg mb-4 -ml-4 shadow-sm">
                 <span class="font-semibold">2023年11月</span>
             </div>
 
@@ -51,7 +55,7 @@
                 <div class="timeline-date">2023年11月15日 · 咖啡厅</div>
                 <div class="timeline-content">
                     <div class="flex items-center mb-3">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-10 h-10 rounded-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow">
                         <div class="ml-3">
                             <div class="font-semibold">张小明</div>
                             <div class="text-gray text-xs">大学同学</div>
@@ -59,7 +63,18 @@
                     </div>
                     <p>一起讨论了新项目的想法，她提出了很多有创意的建议。下次约定去参观她推荐的艺术展。</p>
                     <div class="mt-3">
-                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="rounded-lg w-full h-48 object-cover">
+                        <div class="fancy-image">
+                            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="tag">
+                            <i class="far fa-smile text-accent-color-1 mr-1"></i>
+                            开心
+                        </div>
+                        <div class="text-sm text-gray">
+                            <i class="fas fa-map-marker-alt mr-1"></i> 星巴克咖啡厅
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,13 +83,22 @@
                 <div class="timeline-date">2023年11月10日 · 小区</div>
                 <div class="timeline-content">
                     <div class="flex items-center mb-3">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-10 h-10 rounded-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow">
                         <div class="ml-3">
                             <div class="font-semibold">赵强</div>
                             <div class="text-gray text-xs">邻居</div>
                         </div>
                     </div>
                     <p>在小区遇到赵强，聊了最近的物业管理问题。他提到最近在学习烹饪，邀请我有空去他家尝尝他的手艺。</p>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="tag">
+                            <i class="far fa-meh text-gray-color mr-1"></i>
+                            一般
+                        </div>
+                        <div class="text-sm text-gray">
+                            <i class="fas fa-map-marker-alt mr-1"></i> 阳光小区
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -82,7 +106,7 @@
                 <div class="timeline-date">2023年11月2日 · 公司</div>
                 <div class="timeline-content">
                     <div class="flex items-center mb-3">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-10 h-10 rounded-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow">
                         <div class="ml-3">
                             <div class="font-semibold">李华</div>
                             <div class="text-gray text-xs">工作伙伴</div>
@@ -90,14 +114,27 @@
                     </div>
                     <p>与李华一起完成了季度报告，他的数据分析能力很强。会议结束后一起吃了午饭，聊了他最近的旅行计划。</p>
                     <div class="mt-3 grid grid-cols-2 gap-2">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="rounded-lg w-full h-24 object-cover">
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="rounded-lg w-full h-24 object-cover">
+                        <div class="fancy-image">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="w-full h-24 object-cover">
+                        </div>
+                        <div class="fancy-image">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="w-full h-24 object-cover">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="tag">
+                            <i class="far fa-smile text-accent-color-1 mr-1"></i>
+                            开心
+                        </div>
+                        <div class="text-sm text-gray">
+                            <i class="fas fa-map-marker-alt mr-1"></i> 创新科技大厦
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 日期分组 -->
-            <div class="bg-light-color py-2 px-4 rounded-lg mb-4 mt-6 -ml-4">
+            <div class="bg-light-color py-2 px-4 rounded-lg mb-4 mt-6 -ml-4 shadow-sm">
                 <span class="font-semibold">2023年10月</span>
             </div>
 
@@ -105,7 +142,7 @@
                 <div class="timeline-date">2023年10月15日 · 公园</div>
                 <div class="timeline-content">
                     <div class="flex items-center mb-3">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-10 h-10 rounded-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow">
                         <div class="ml-3">
                             <div class="font-semibold">张小明</div>
                             <div class="text-gray text-xs">大学同学</div>
@@ -113,8 +150,21 @@
                     </div>
                     <p>周末一起去公园散步，聊了很多关于未来规划的话题。她最近在考虑换工作，想找一个更有挑战性的职位。</p>
                     <div class="mt-3 grid grid-cols-2 gap-2">
-                        <img src="https://images.unsplash.com/photo-1503622470746-04db6c6c4e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="rounded-lg w-full h-24 object-cover">
-                        <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="rounded-lg w-full h-24 object-cover">
+                        <div class="fancy-image">
+                            <img src="https://images.unsplash.com/photo-1503622470746-04db6c6c4e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="w-full h-24 object-cover">
+                        </div>
+                        <div class="fancy-image">
+                            <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="w-full h-24 object-cover">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="tag">
+                            <i class="far fa-meh text-gray-color mr-1"></i>
+                            一般
+                        </div>
+                        <div class="text-sm text-gray">
+                            <i class="fas fa-map-marker-alt mr-1"></i> 中央公园
+                        </div>
                     </div>
                 </div>
             </div>
@@ -123,7 +173,7 @@
                 <div class="timeline-date">2023年10月8日 · 电影院</div>
                 <div class="timeline-content">
                     <div class="flex items-center mb-3">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-10 h-10 rounded-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow">
                         <div class="ml-3">
                             <div class="font-semibold">王芳</div>
                             <div class="text-gray text-xs">高中同学</div>
@@ -131,7 +181,18 @@
                     </div>
                     <p>和王芳一起去看了新上映的科幻电影，她一直是科幻迷。电影结束后讨论了剧情，她的分析总是很独到。</p>
                     <div class="mt-3">
-                        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="rounded-lg w-full h-48 object-cover">
+                        <div class="fancy-image">
+                            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="tag">
+                            <i class="far fa-smile text-accent-color-1 mr-1"></i>
+                            开心
+                        </div>
+                        <div class="text-sm text-gray">
+                            <i class="fas fa-map-marker-alt mr-1"></i> 星光影院
+                        </div>
                     </div>
                 </div>
             </div>
