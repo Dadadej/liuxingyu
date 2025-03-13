@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人记 - 人物详情</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- 状态栏 -->
+    <div class="status-bar">
+        <div class="time">9:41</div>
+        <div class="icons">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <div class="back-button" onclick="location.href='home.html'">
+            <i class="fas fa-chevron-left"></i> 返回
+        </div>
+        <div class="title">张小明</div>
+        <div class="action-button">
+            <i class="fas fa-ellipsis-h"></i>
+        </div>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="container">
+        <!-- 人物信息卡片 -->
+        <div class="card">
+            <div class="card-body">
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" alt="头像" class="w-24 h-24 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h1 class="text-2xl font-bold">张小明</h1>
+                        <p class="text-gray">大学同学</p>
+                        <div class="flex mt-2">
+                            <div class="mr-4">
+                                <i class="fas fa-phone text-primary"></i>
+                                <span class="ml-1">联系</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-edit text-primary"></i>
+                                <span class="ml-1">编辑</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 基本信息 -->
+        <div class="card mt-4">
+            <div class="card-header">基本信息</div>
+            <div class="card-body">
+                <div class="grid grid-cols-1 gap-3">
+                    <div class="flex justify-between">
+                        <span class="text-gray">手机号码</span>
+                        <span>138****1234</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray">邮箱</span>
+                        <span>xiaoming@example.com</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray">生日</span>
+                        <span>1995年5月15日</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray">首次相识</span>
+                        <span>2018年9月1日</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray">上次见面</span>
+                        <span>2023年10月15日</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 备注信息 -->
+        <div class="card mt-4">
+            <div class="card-header">备注</div>
+            <div class="card-body">
+                <p>计算机科学专业毕业，现在在一家互联网公司做前端开发。喜欢摄影和旅行，经常分享一些很棒的照片。性格开朗，乐于助人。</p>
+            </div>
+        </div>
+
+        <!-- 事件记录 -->
+        <h2 class="text-xl font-bold mb-2 mt-4">事件记录</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2023年11月15日 · 咖啡厅</div>
+                <div class="timeline-content">
+                    <p>一起讨论了新项目的想法，她提出了很多有创意的建议。下次约定去参观她推荐的艺术展。</p>
+                    <div class="mt-3">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="rounded-lg w-full h-48 object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2023年10月15日 · 公园</div>
+                <div class="timeline-content">
+                    <p>周末一起去公园散步，聊了很多关于未来规划的话题。她最近在考虑换工作，想找一个更有挑战性的职位。</p>
+                    <div class="mt-3 grid grid-cols-2 gap-2">
+                        <img src="https://images.unsplash.com/photo-1503622470746-04db6c6c4e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="rounded-lg w-full h-24 object-cover">
+                        <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="事件图片" class="rounded-lg w-full h-24 object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2023年8月20日 · 餐厅</div>
+                <div class="timeline-content">
+                    <p>庆祝她获得项目奖励，一起去了她最喜欢的日料餐厅。她分享了很多工作中的有趣故事，也给了我一些职业发展的建议。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 浮动添加按钮 -->
+    <a href="add_event.html" class="floating-btn">
+        <i class="fas fa-plus"></i>
+    </a>
+
+    <!-- 底部标签栏 -->
+    <div class="tab-bar">
+        <div class="tab-item active" onclick="location.href='home.html'">
+            <i class="fas fa-user-friends"></i>
+            <span>人物</span>
+        </div>
+        <div class="tab-item" onclick="location.href='timeline.html'">
+            <i class="fas fa-clock"></i>
+            <span>时间线</span>
+        </div>
+        <div class="tab-item" onclick="location.href='settings.html'">
+            <i class="fas fa-cog"></i>
+            <span>设置</span>
+        </div>
+    </div>
+</body>
+</html> 
