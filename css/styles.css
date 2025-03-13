@@ -43,16 +43,14 @@ body {
     flex-direction: column;
 }
 
-/* 动态岛样式 */
+/* 动态岛样式 - 移除黑框框 */
 .dynamic-island {
     position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 25px;
-    background-color: #000;
-    border-radius: 15px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
     z-index: 1000;
 }
 
@@ -62,14 +60,13 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 40px;
+    height: 30px;
     background-color: rgba(255, 255, 255, 0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
     z-index: 100;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .status-bar .time {
@@ -83,17 +80,19 @@ body {
 
 /* 导航栏样式 */
 .nav-bar {
-    position: sticky;
-    top: 40px;
+    position: fixed;
+    top: 30px;
     left: 0;
     right: 0;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
-    z-index: 99;
+    z-index: 100;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
@@ -121,19 +120,22 @@ body {
 
 /* 底部标签栏样式 */
 .tab-bar {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     height: 60px;
     background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 10px;
-    z-index: 99;
+    padding: 0 15px;
+    z-index: 100;
     border-top: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    padding-bottom: 10px;
 }
 
 .tab-item {
@@ -157,11 +159,10 @@ body {
 
 /* 主容器样式 */
 .container {
-    flex: 1;
     padding: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    overflow-y: auto;
+    padding-top: 90px; /* 状态栏+导航栏高度+一些额外空间 */
+    padding-bottom: 70px; /* 底部标签栏高度+一些额外空间 */
+    min-height: 100vh;
 }
 
 /* 卡片样式 */
@@ -521,16 +522,16 @@ body {
     background: var(--accent-color-1);
 }
 
-/* 媒体查询适配 iPhone 16 Pro */
+/* 媒体查询适配一般移动设备 */
 @media screen and (min-width: 393px) {
     .container {
-        padding-bottom: 100px;
-        max-width: var(--iphone-16-pro-width);
+        padding-bottom: 80px;
+        max-width: 480px;
         margin: 0 auto;
     }
     
     .status-bar, .nav-bar, .tab-bar {
-        max-width: var(--iphone-16-pro-width);
+        max-width: 480px;
         margin: 0 auto;
         left: 50%;
         transform: translateX(-50%);
@@ -572,49 +573,47 @@ body {
 /* 设备模拟框架 */
 .device-frame {
     position: relative;
-    max-width: var(--iphone-16-pro-width);
+    max-width: 480px;
     margin: 0 auto;
-    border-radius: 40px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 0 0 10px #f2f2f2;
     overflow: hidden;
     background-color: #fff;
     min-height: 100vh;
-    padding-top: 55px; /* 为状态栏留出空间 */
+    padding-top: 0; /* 移除顶部填充 */
 }
 
-/* 调整状态栏以适应动态岛 */
+/* 调整状态栏 */
 .status-bar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 55px;
-    background-color: transparent;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 15px;
     z-index: 100;
-    padding-top: 15px;
+    padding-top: 5px;
 }
 
 /* 调整导航栏高度和位置 */
 .nav-bar {
     position: fixed;
-    top: 55px;
+    top: 30px;
     left: 0;
     right: 0;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.9);
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 15px;
     z-index: 100;
     border-bottom: 1px solid rgba(0,0,0,0.1);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 /* 调整底部标签栏 */
@@ -623,24 +622,24 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 85px;
-    background-color: rgba(255, 255, 255, 0.9);
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 15px;
     z-index: 100;
     border-top: 1px solid rgba(0,0,0,0.1);
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
-    padding-bottom: 25px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    padding-bottom: 10px;
 }
 
 /* 调整容器内边距 */
 .container {
-    padding: 20px;
-    padding-top: 130px;
-    padding-bottom: 100px;
+    padding: 15px;
+    padding-top: 90px; /* 状态栏+导航栏高度+一些额外空间 */
+    padding-bottom: 70px; /* 底部标签栏高度+一些额外空间 */
     min-height: 100vh;
 } 
