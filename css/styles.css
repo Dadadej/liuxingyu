@@ -34,13 +34,13 @@ body {
 /* 设备模拟框架 */
 .device-frame {
     position: relative;
-    width: 100%;
     max-width: 480px;
     margin: 0 auto;
+    overflow: hidden;
     background-color: #fff;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    padding-top: 0; /* 移除顶部填充 */
+    width: 100%; /* 确保宽度为100% */
 }
 
 /* 动态岛样式 - 移除黑框框 */
@@ -56,10 +56,12 @@ body {
 
 /* 状态栏样式 */
 .status-bar {
-    position: sticky;
+    position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
     height: 30px;
     background-color: rgba(255, 255, 255, 0.95);
     display: flex;
@@ -67,6 +69,8 @@ body {
     align-items: center;
     padding: 0 15px;
     z-index: 100;
+    padding-top: 5px;
+    box-sizing: border-box;
 }
 
 .status-bar .time {
@@ -82,8 +86,10 @@ body {
 .nav-bar {
     position: fixed;
     top: 30px;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -95,6 +101,7 @@ body {
     z-index: 100;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-sizing: border-box;
 }
 
 .nav-bar .title {
@@ -122,8 +129,10 @@ body {
 .tab-bar {
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
     height: 60px;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -136,6 +145,7 @@ body {
     border-top: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
     padding-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .tab-item {
@@ -163,6 +173,10 @@ body {
     padding-top: 90px; /* 状态栏+导航栏高度+一些额外空间 */
     padding-bottom: 70px; /* 底部标签栏高度+一些额外空间 */
     min-height: 100vh;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* 卡片样式 */
@@ -536,6 +550,7 @@ body {
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
+        box-sizing: border-box;
     }
     
     /* 调整卡片和表单元素大小 */
@@ -568,78 +583,4 @@ body {
     .list-item {
         padding: 16px;
     }
-}
-
-/* 设备模拟框架 */
-.device-frame {
-    position: relative;
-    max-width: 480px;
-    margin: 0 auto;
-    overflow: hidden;
-    background-color: #fff;
-    min-height: 100vh;
-    padding-top: 0; /* 移除顶部填充 */
-}
-
-/* 调整状态栏 */
-.status-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.95);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-    z-index: 100;
-    padding-top: 5px;
-}
-
-/* 调整导航栏高度和位置 */
-.nav-bar {
-    position: fixed;
-    top: 30px;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-    z-index: 100;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-/* 调整底部标签栏 */
-.tab-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 15px;
-    z-index: 100;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
-    padding-bottom: 10px;
-}
-
-/* 调整容器内边距 */
-.container {
-    padding: 15px;
-    padding-top: 90px; /* 状态栏+导航栏高度+一些额外空间 */
-    padding-bottom: 70px; /* 底部标签栏高度+一些额外空间 */
-    min-height: 100vh;
 } 
